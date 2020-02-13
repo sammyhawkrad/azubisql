@@ -1,0 +1,23 @@
+1)
+SELECT COUNT(DISTINCT(Author))
+FROM users
+
+2)
+SELECT COUNT(transfer_id)
+FROM transfers
+WHERE send_amount_currency = CFA
+
+3)
+SELECT COUNT(DISTINCT(u_id))
+FROM transfers
+WHERE send_amount_currency = CFA
+
+4)
+SELECT DATE_PART('month', when_created), COUNT(agent_transactions)
+FROM agent_transactions
+WHERE YEAR(when_created)=2008
+GROUP BY 1
+
+5)
+SELECT COUNT()
+FROM
